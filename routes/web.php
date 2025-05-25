@@ -58,6 +58,8 @@ Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('faqcategories.'
     Route::delete('/faq_categories/{faqCategory}', [FaqCategoryController::class, 'destroy'])->name('destroy'); // verwijderen
 });
 
+
+//dit is voor de FAQS alleen, niet de categorien
 Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('faqs.')->group(function () {
     Route::get('/faqs/create', [FAQController::class, 'create'])->name('create');   // formulier
     Route::post('/faqs', [FAQController::class, 'opslaan'])->name('store');     // opslaan nieuwe vraag
