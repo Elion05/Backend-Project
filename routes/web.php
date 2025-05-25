@@ -52,14 +52,21 @@ Route::post('/users', [UserController::class, 'opslaan'])->name('users.store');
 Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('faqcategories.')->group(function () {
     Route::get('/faq_categories', [FaqCategoryController::class, 'index'])->name('index'); // lijst
     Route::get('/faq_categories/create', [FaqCategoryController::class, 'create'])->name('create'); // formulier
-    Route::post('/faq_categories', [FaqCategoryController::class, 'opslaan'])->name('opslaan'); // opslaan
-
+    Route::post('/faq_categories', [FaqCategoryController::class, 'opslaan'])->name('store'); // opslaan
     Route::get('/faq_categories/{faqCategory}/edit', [FaqCategoryController::class, 'edit'])->name('edit'); // formulier voor bewerken
     Route::put('/faq_categories/{faqCategory}', [FaqCategoryController::class, 'update'])->name('update'); // update opslaan
     Route::delete('/faq_categories/{faqCategory}', [FaqCategoryController::class, 'destroy'])->name('destroy'); // verwijderen
 });
 
-
+Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('faqs.')->group(function () {
+    Route::get('/faqs/create', [FAQController::class, 'create'])->name('create');   // formulier
+    Route::post('/faqs', [FAQController::class, 'opslaan'])->name('store');     // opslaan nieuwe vraag
+    //verwijderen van faqs(alleen maar voor admins te zien)
+    Route::delete('/faqs/{faq}', [FAQController::class, 'destroy'])->name('destroy');
+    
+    Route::get('/faqs/{faq}/edit', [FAQController::class, 'edit'])->name('edit');
+    Route::put('/faqs/{faq}', [FAQController::class, 'update'])->name('update');
+});
 
 
 
