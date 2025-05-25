@@ -48,20 +48,19 @@ Route::get('/users/create', [UserController::class, 'gebruikerCreaten'])->name('
 Route::post('/users', [UserController::class, 'opslaan'])->name('users.store');
 });
 
-//route voor FAQ voor admins only
-Route::middleware('auth', 'can:admin')->prefix('admin')->name('faqs.')->group(function() {
-    Route::get('admin/faqs', [FaqController::class, 'index']);
-    Route::get('/faqs/create', [FAQController::class, 'create'])->name('create'); //faq tonen 
-    Route::post('/faqs', [FAQController::class, 'opslaan'])->name('store');  //aanmaken
-});
-
-
-
-//route voor cateogries
+// CRUD-routes voor FAQ categorieën verbetert door chatgpt
 Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('faqcategories.')->group(function () {
-Route::get('/faq_categories/create', [FaqCategoryController::class, 'create'])->name('create');
-Route::post('/faq_categories', [FaqCategoryController::class, 'opslaan'])->name('opslaan');
+    Route::get('/faq_categories', [FaqCategoryController::class, 'index'])->name('index'); // lijst
+    Route::get('/faq_categories/create', [FaqCategoryController::class, 'create'])->name('create'); // formulier
+    Route::post('/faq_categories', [FaqCategoryController::class, 'opslaan'])->name('opslaan'); // opslaan
+
+    Route::get('/faq_categories/{faqCategory}/edit', [FaqCategoryController::class, 'edit'])->name('edit'); // formulier voor bewerken
+    Route::put('/faq_categories/{faqCategory}', [FaqCategoryController::class, 'update'])->name('update'); // update opslaan
+    Route::delete('/faq_categories/{faqCategory}', [FaqCategoryController::class, 'destroy'])->name('destroy'); // verwijderen
 });
+
+
+
 
 
 //deze faq is voor publieke 
