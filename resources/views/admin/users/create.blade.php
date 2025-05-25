@@ -74,13 +74,6 @@
             <input type="password" name="password" id="password" required>
         </div>
 
-        <div class="formulier">
-            <label>
-                <input type="checkbox" name="is_admin">
-                Admin rechten geven?
-            </label>
-        </div>
-
         <button type="submit">Aanmaken</button>
     </form>
 </div>

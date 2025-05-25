@@ -74,7 +74,6 @@ Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('faqs.')->group(
 Route::get('/faq', [publiekeFaqController::class, 'indexfaq'])->name('faq.index');
 
 
-
 //Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');

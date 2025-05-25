@@ -33,7 +33,7 @@
                     <form method="POST" action="{{ route('admin.users.verhefAdmin', $user) }}">
                         @csrf
                         @method('PATCH')
-                        <button class="button button-blue" type="submit">
+                        <button class="button" type="submit">
                             {{ $user->is_admin ? 'Adminrechten afnemen' : 'Maak admin' }}
                         </button>
                     </form>

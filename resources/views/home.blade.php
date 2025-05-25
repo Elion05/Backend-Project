@@ -4,7 +4,8 @@
 
 @section('content')
 
-<h1>Homepage</h1>
+<h1>Welkom to Destiny help page</h1>
+
 
 
 
