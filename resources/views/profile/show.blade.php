@@ -4,7 +4,7 @@
 
 @section('content')
     <div>
-        <h1>Username: {{ $user->username }}</h1>
+        <h1><strong>Username:</strong> {{ $user->username }}</h1>
         <p><strong>Naam:</strong> {{ $user->name }}</p>
         <p><strong>Verjaardag:</strong> {{ $user->birthday ? \Carbon\Carbon::parse($user->birthday)->format('d-m-Y') : 'Niet opgegeven' }}</p>
         <p><strong>Over mij:</strong> {{ $user->bio ?? 'Geen info' }}</p>

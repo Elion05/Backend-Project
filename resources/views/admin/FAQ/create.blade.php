@@ -5,6 +5,11 @@
 @section('content')
     <h1>Nieuwe  FAQ toevoegen</h1>
 
+    <style>
+
+        
+
+    </style>
     <form method="POST" action="{{ route('faqs.store') }}">
         @csrf
 
@@ -16,6 +21,7 @@
                 @endforeach
             </select>
         </div>
+
 
         <div>
             <label for="question">Vraag</label>

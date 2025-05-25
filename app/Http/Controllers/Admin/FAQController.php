@@ -22,12 +22,12 @@ class FAQController extends Controller{
 
         //validatie
         $request->validate([
-            'faq_category_id' => 'required|exists:faq_categories, id',
+            'faq_category_id' => 'required|exists:faq_categories,id',
             'question' => 'required|string|max:255',
             'answer' => 'required|string',
         ]);
 
-        
+        //nieuwe faq toevoegen aan de database 
         Faq::create([
             'faq_category_id' => $request->faq_category_id,
             'question'        => $request->question,
@@ -35,7 +35,7 @@ class FAQController extends Controller{
         ]);
 
         return redirect() ->
-         route('FAQ.FAQ_create') -> 
+         route('faqs.create') -> 
          with('succes' , 'vraag toegevoegt');
     }
 

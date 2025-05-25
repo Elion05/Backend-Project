@@ -63,4 +63,8 @@ class UserController extends Controller{
 
         return redirect() -> route('admin.users.index') -> with('succes', 'U heeft een gebruiker succesvol aangemaakt aan het systeem.');
     }
+
+    public function show(User $user){
+        return view('admin.users.show', compact('user'));
+    }
 }

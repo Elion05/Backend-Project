@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\publiekeFaqController;
 use App\Http\Controllers\Admin\FAQController;
+use App\Http\Controllers\Admin\FaqCategoryController;
+
 
 
 //default homescreen
@@ -16,6 +18,10 @@ Route::get('/', function () {
 //profiel
 Route::get('/profiel/{username}', [ProfileController::class, 'show'])->name('profile.show');
 
+//profiel route voor niet ingelogde gebruikers
+Route::get('/profiel', function () {
+    return view('profile.default'); // of noem het hoe je wilt
+})->name('profile.default');
 
 
 //login
@@ -47,9 +53,15 @@ Route::middleware('auth', 'can:admin')->prefix('admin')->name('faqs.')->group(fu
     Route::get('admin/faqs', [FaqController::class, 'index']);
     Route::get('/faqs/create', [FAQController::class, 'create'])->name('create'); //faq tonen 
     Route::post('/faqs', [FAQController::class, 'opslaan'])->name('store');  //aanmaken
-
 });
 
+
+
+//route voor cateogries
+Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('faqcategories.')->group(function () {
+Route::get('/faq_categories/create', [FaqCategoryController::class, 'create'])->name('create');
+Route::post('/faq_categories', [FaqCategoryController::class, 'opslaan'])->name('opslaan');
+});
 
 
 //deze faq is voor publieke 
