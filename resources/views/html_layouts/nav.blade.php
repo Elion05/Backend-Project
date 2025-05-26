@@ -47,7 +47,7 @@ body {
 }
 
 .navbar {
-    background-color: #2c3e50;
+    background-color:rgb(82, 121, 161);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +66,6 @@ body {
     border: none;
     font-size: 16px;
     cursor: pointer;
-    border-bottom:1px solid gray;
     margin: bottom 5px;;
 }
 
