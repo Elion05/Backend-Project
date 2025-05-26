@@ -50,19 +50,19 @@ class FaqCategoryController extends Controller
     //een bestaande categorie aanpassen van naam
     //
    
- //public function update(Request $request, FaqCategory $faqCategory){
+ public function update(Request $request, FaqCategory $faqCategory){
 
-   //     $request->validate([
-     //       'name' => 'required|string|max:255|unique:faq_categories,name,' . $faqCategory->id,
-       // ]);
+     $request->validate([
+           'name' => 'required|string|max:255|unique:faq_categories,name,' . $faqCategory->id,
+        ]);
 
         //updaten van categorie
-      //  $faqCategory -> update([
-        //    'name' => $request->name,
-        //]);
+        $faqCategory -> update([
+           'name' => $request->name,
+        ]);
 
-      //  return redirect()->route('faqcategories.index')->with('succes', 'categorie aangepast');
-    //}
+        return redirect()->route('faqcategories.index')->with('succes', 'categorie aangepast');
+    }
 
     //categorie verwijderen van database en formulier
     public function destroy(FaqCategory $faqCategory){

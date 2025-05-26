@@ -16,7 +16,7 @@ class FAQController extends Controller{
     //nieuwe vragen toe te voegen
     public function create(){
         $categories = FaqCategory::all();    //automatisch arrays aanmaken
-        return view('admin.faq.create', compact('categories'));
+        return view('admin.faq.createfaq', compact('categories'));
     }
     
 

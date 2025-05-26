@@ -7,46 +7,7 @@
 @section('content')
 <!--simpele css voor de formulier, ik moet dit nog aanpassen-->
 <style>
-    .container {
-    max-width: 600px;
-    margin: 10px auto;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 4px;
-  }
-  
-  input[type="password"] {
-    width: 100%;
-    padding: 8px;    
-  }
-
-  input[type="email"]{
-    width: 100%;
-    padding: 8px;
-  }
-  
-  input[type="text"]{
-    width: 100%;
-    padding: 8px;
-  }
-
-  input[type="checkbox"] {
-    margin-right: 6px;
-  }
-  
-  button {
-    background:rgb(6, 93, 186);
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 4px;
-  }
+    
 </style>
 <div class="container">
     <h1>Nieuwe Gebruiker Aanmaken</h1>

@@ -1,0 +1,253 @@
+/*chatgpt css*/
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.alert-error {
+    background-color: #fecaca;
+    color: #991b1b;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+/*einde chatgpt css*/
+
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.titel {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    color: black;
+    background-color: #859189;
+}
+
+.gebruikers{
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*HIER ZIT ALLES VAN CSS VOOR DE FAQ, OOK VOOR HET TOEVOEGEN BEHALVE VOOR DE CATEGORIE TOE TE VOEGEN*/
+
+.FAQ_container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.FAQ_container h2 {
+    border-bottom: 2px solid #7a8896;
+    
+    margin-top: 2rem;
+    color: #007BFF;
+}
+
+.FAQ_vragen {
+    list-style: none;
+}
+
+.FAQ_vragen li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.FAQ_antwoorden p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+
+.FAQ_acties {
+    margin-top: 1rem;
+    display: flex;
+    gap: 80px;
+}
+
+.FAQ_bewerk button {
+    background-color: #28a745;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.FAQ_verwijderen button {
+    background-color: #dc3545;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.FAQ_toevoegen a {
+    display: inline-block;
+    background-color: #888179;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+}
+
+/*deze is voor de faq toevoegen*/
+
+.faq-create-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.faq-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.faq-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.faq-submit-btn {
+    background-color: #727e8f;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/*dit is niet zichtbaar voor de admins, 
+dit is achter de schermen voor mezelf om de naam van de categorie te veranderen*/
+.faq_edit_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.faq_edit_form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq_edit_group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq_edit_label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.faq_edit_input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.faq_edit_button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.faq_edit_button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/*css voor de users*/
+.container {
+    max-width: 600px;
+    margin: 10px auto;
+}
+  
+h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+  
+input[type="password"] {
+    width: 100%;
+    padding: 8px;    
+}
+
+input[type="email"]{
+    width: 100%;
+    padding: 8px;
+}
+  
+input[type="text"]{
+    width: 100%;
+    padding: 8px;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+  
+button {
+    background:rgb(6, 93, 186);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 4px;
+
+}

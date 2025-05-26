@@ -19,7 +19,23 @@
         </div>
     </div>
 
-    <a href="{{ route('faq.index') }}">FAQ</a>
+<!--alleen zichtbar voor admins-->
+    @auth
+    @if(Auth::user()->is_admin)
+        <div class="dropdown">
+            <button class="dropbtn">FAQ ▾</button>
+            <div class="dropdown-menu">
+                <a href="{{ route('faq.index') }}">Bekijk FAQ</a>
+                <a href="{{ route('faqs.create') }}">Nieuwe FAQ toevoegen</a>
+            </div>
+        </div>
+        @else
+        <a href="{{ route('faq.index') }}">Bekijk FAQ</a>
+        @endif
+        @else
+        <a href="{{ route('faq.index') }}">Bekijk FAQ</a>
+@endauth
+
 </div>
 
 <style>
@@ -50,6 +66,8 @@ body {
     border: none;
     font-size: 16px;
     cursor: pointer;
+    border-bottom:1px solid gray;
+    margin: bottom 5px;;
 }
 
 .navbar a:hover,

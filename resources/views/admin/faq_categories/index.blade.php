@@ -3,7 +3,6 @@
 @section('title', 'Categorieën overzicht')
 
 @section('content')
-    <h1>Categorieën</h1>
 
     @if(session('succes'))
         <p style="color: green;">{{ session('succes') }}</p>

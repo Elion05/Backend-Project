@@ -16,6 +16,4 @@ class publiekeFaqController extends Controller
         return view('faq.index', compact('categories'));
 
     }
-
-   
 }

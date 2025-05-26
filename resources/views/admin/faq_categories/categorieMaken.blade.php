@@ -5,7 +5,7 @@
 @section('content')
     <h1>Nieuwe categorie toevoegen</h1>
 
-    <form method="POST" action="{{ route('faqcategories.opslaan') }}">
+    <form method="POST" action="{{ route('faqcategories.store') }}">
         @csrf
         <div>
             <label for="name">Naam van de categorie</label>

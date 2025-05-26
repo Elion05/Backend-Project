@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>App</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'public/css/style.css'])
+    @vite(['public/css/app.css', 'resources/js/app.js', 'public/css/mystyle.css'])
 </head>
 
 <body class="font-sans antialiased">
