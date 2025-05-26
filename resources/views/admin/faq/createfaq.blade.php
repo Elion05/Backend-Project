@@ -3,7 +3,7 @@
 @section('title', 'Nieuwe FAQ toevoegen')
 
 @section('content')
-    <h1>Nieuwe FAQ toevoegen</h1>
+    <h1 class="h1_faq_create">Nieuwe FAQ toevoegen</h1>
 
     <form method="POST" action="{{ route('faqs.store') }}" class="faq-create-form">
         @csrf

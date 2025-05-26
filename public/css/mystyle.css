@@ -121,9 +121,15 @@
     max-width: 500px;
     margin: 20px auto;
     padding: 15px;
-    background: #fff;
+    background-color: rgb(73, 73, 75);
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    color:yellow;
+}
+.h1_faq_create{
+    border-bottom: 2px solid rgb(63, 29, 196);
+    max-width: fit-content;
+    justify-self: center;
+    color: rgb(94, 94, 92);
 }
 
 .faq-label {
@@ -170,10 +176,10 @@ dit is achter de schermen voor mezelf om de naam van de categorie te veranderen*
 .faq_edit_form {
     max-width: 400px;
     margin: 0 auto;
-    background-color: #0b7b1780;
+    border-radius: 20px;
+    background-color: rgb(13, 174, 224);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(172, 152, 152, 0.1);
+    
 }
 
 .faq_edit_group {
@@ -205,7 +211,8 @@ dit is achter de schermen voor mezelf om de naam van de categorie te veranderen*
 }
 
 .faq_edit_button:hover {
-    background-color: #0056b3;
+    background-color: #98c2cc;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -300,4 +307,65 @@ button {
     background-color: rgb(128, 119, 119);
     color: white;
     transition: 0.3s ease-in-out;
+}
+
+
+
+/*Dit is voor de admin/nieuws/create css formulier voor de niuews*/
+/*deze is hetzelfde css zoals van de FAQ toevoegen, maar ik heb chatgpt gebruikt om het te schrijven
+om minder tijd te verspillen*/
+.create_nieuws-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgb(73, 73, 75);
+    border-radius: 8px;
+    color: yellow;
+}
+
+.create_nieuws-title {
+    border-bottom: 2px solid rgb(63, 29, 196);
+    max-width: fit-content;
+    justify-self: center;
+    color: rgb(94, 94, 92);
+    margin-bottom: 20px;
+}
+
+.create_nieuws-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.create_nieuws-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.create_nieuws-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.create_nieuws-submit-btn {
+    background-color: #727e8f;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
 }

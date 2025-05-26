@@ -6,14 +6,19 @@ use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\publiekeFaqController;
 use App\Http\Controllers\Admin\FAQController;
 use App\Http\Controllers\Admin\FaqCategoryController;
-
+use App\Http\Controllers\NieuwsController;
+use App\Models\Nieuws;
 
 
 //default homescreen
-Route::get('/', function () {
-    return view('home');
-})->name('home');
 
+
+
+//Route::get('/', function () {
+//    return view('home');
+//})->name('home');
+
+Route::get('/', [NieuwsController::class, 'home'])->name('home');
 
 //profiel
 Route::get('/profiel/{username}', [ProfileController::class, 'show'])->name('profile.show');
@@ -23,18 +28,15 @@ Route::get('/profiel', function () {
     return view('profile.default'); // of noem het hoe je wilt
 })->name('profile.default');
 
-
 //login
 Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-
 //registeren
 Route::get('/register', function () {
     return view('register');
 })->name('register');
-
 
 
 //admin
@@ -43,10 +45,11 @@ Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('admin.')->group
     Route::patch('/users/{user}/toggle-admin', [UserController::class, 'verhefAdmin'])->name('users.verhefAdmin');
 
 
-    //create route voor de admins
+//create route voor de admins
 Route::get('/users/create', [UserController::class, 'gebruikerCreaten'])->name('users.create');
 Route::post('/users', [UserController::class, 'opslaan'])->name('users.store');
 });
+
 
 // CRUD-routes voor FAQ categorieën verbetert door chatgpt
 Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('faqcategories.')->group(function () {
@@ -65,7 +68,6 @@ Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('faqs.')->group(
     Route::post('/faqs', [FAQController::class, 'opslaan'])->name('store');     // opslaan nieuwe vraag
     //verwijderen van faqs(alleen maar voor admins te zien)
     Route::delete('/faqs/{faq}', [FAQController::class, 'destroy'])->name('destroy');
-    
     Route::get('/faqs/{faq}/edit', [FAQController::class, 'edit'])->name('edit');
     Route::put('/faqs/{faq}', [FAQController::class, 'update'])->name('update');
 });
@@ -90,4 +92,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+//routes voor nieuwsberichten
+Route::get('/nieuws', [NieuwsController::class, 'index'])->name('nieuws.index');
+Route::get('/nieuws/{nieuws}', [NieuwsController::class, 'show'])->name('nieuws.show');
+
+
+
+Route::middleware(['auth', 'can:admin'])->prefix('admin')->group(function(){
+    Route::resource('nieuws', NieuwsController::class)->except(['index','show']);
+});
 require __DIR__.'/auth.php';

@@ -25,8 +25,10 @@
         @foreach ($users as $user)
             <div class="gebruikers">
                 <div>
-                    <strong>{{ $user->name }}</strong> ({{ $user->email }})<br>
-                    Admin: <span><strong>{{ $user->is_admin ? 'Ja' : 'Nee' }}</strong></span>
+                    <strong>Name: {{ $user->name }}</strong> <br>Username: {{$user->username}}<br>
+                    Email: {{$user->email}} <br>
+                    
+                    Admin rechten: <span><strong>{{ $user->is_admin ? 'Ja' : 'Nee' }}</strong></span>
                 </div>
 
                 @if(auth()->id() !== $user->id)
