@@ -22,16 +22,16 @@ class DatabaseSeeder extends Seeder
 
 
         //dit is voor admin users
-//        User::create([
-  //          'name' => 'Admin2',
-    //        'username' => 'wachtwoord is test123456',
-      //     'email' => 'admin@ehb.com',
-       //    'password' => Hash::make('test123456'),
-//            'is_admin' => true,
-  //          'birthday' => '2005-07-22',
-    //        'bio' => 'ik ben admin lol 2',
-      //      'profile_image' => '...',
-        //]);
+        User::create([
+            'name' => 'Admin',
+            'username' => 'wachtwoord is Password!321',
+            'email' => 'admin@ehb.be',
+            'password' => Hash::make('Password!321'),
+            'is_admin' => true,
+            'birthday' => '2005-07-22',
+            'bio' => 'ik ben admin lol 2',
+            'profile_image' => '...',
+        ]);
 
 
 

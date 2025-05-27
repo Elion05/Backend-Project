@@ -15,7 +15,7 @@ class NieuwsSeeder extends Seeder
     public function run(): void
     {
         Nieuws::create([
-            'titel' => 'test?',
+            'titel' => 'Seedr voor de nIuewezsw',
             'nieuws' => 'eedffdrste',
             'foto' => 'news_images/11imZxl1N5KjbgjbtQvgDzXl0O5fvGeIXMFtvESo.jpg',
             'verzondenOp' => Carbon::now(),

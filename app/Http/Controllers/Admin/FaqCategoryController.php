@@ -61,7 +61,7 @@ class FaqCategoryController extends Controller
            'name' => $request->name,
         ]);
 
-        return redirect()->route('faqcategories.index')->with('succes', 'categorie aangepast');
+        return redirect()->route('home')->with('succes', 'categorie aangepast');
     }
 
     //categorie verwijderen van database en formulier

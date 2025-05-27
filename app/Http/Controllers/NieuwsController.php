@@ -93,9 +93,17 @@ class NieuwsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
+    public function destroy(string $id){
+
+        $nieuws = Nieuws::findOrFail($id);
+
+        //foto verwijderen code chatgpt heeft dit gedeelte geschreven
+        if($nieuws->foto){
+            \Storage::disk('public')->delete($nieuws->foto);
+        }
+        $nieuws->delete();
+
+        return redirect()->route('nieuws.index')->with('succes', 'verwijdert');
     }
 
 

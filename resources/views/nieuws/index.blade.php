@@ -21,8 +21,17 @@
                 <br>
             @endif
 
+            @if(Auth::check() && Auth::user()->is_admin)
             <a href="{{ route('admin.nieuws.edit', $nieuws) }}">Bewerk</a>
+            @endif
 
+            @if(Auth::check() && Auth::user()->is_admin)
+            <form action="{{ route('admin.nieuws.destroy', $nieuws) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit">Verwijder</button>
+            </form>
+            @endif
 
         </article>
     @endforeach

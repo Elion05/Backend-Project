@@ -17,7 +17,7 @@ maar het heeft dezelfde structuur als de FAQ toevoegen
         </div>
     @endif
 
-    <form class="create_nieuws-form" action="{{ route('nieuws.store') }}" method="POST" enctype="multipart/form-data">
+    <form class="create_nieuws-form" action="{{ route('admin.nieuws.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <label class="create_nieuws-label" for="titel">Titel</label>

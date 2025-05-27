@@ -97,7 +97,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/nieuws', [NieuwsController::class, 'index'])->name('nieuws.index');
 Route::get('/nieuws/{nieuws}', [NieuwsController::class, 'show'])->name('nieuws.show');
 
-
+Route::delete('/nieuws/{nieuw}', [NieuwsController::class, 'destroy'])->name('admin.nieuws.destroy');
 Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('nieuws', NieuwsController::class)->except(['index','show']);
 });
