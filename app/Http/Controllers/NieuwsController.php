@@ -79,6 +79,7 @@ class NieuwsController extends Controller
             'foto' => 'nullable|image|max:2048',
             'verzondenOp' => 'required|date',
         ]);
+        
 
         if($request->hasFile('foto')){
             $dataUpdate['foto'] = $request->file('foto')->store('news_images', 'public');
