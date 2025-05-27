@@ -50,6 +50,13 @@
                                  {{ __('Nieuws Bericht aanmaken') }}
                             </x-dropdown-link>
                         @endif
+                        
+                        @if(auth()->user()->is_admin)
+                        <x-dropdown-link :href="route('admin.contact.index')">
+                                 {{ __('berichten bekijken') }}
+                            </x-dropdown-link>
+                        @endif
+                        
 
                         <!--FAQ-->
                         @if(auth()->user()->is_admin)

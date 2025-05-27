@@ -428,3 +428,21 @@ om minder tijd te verspillen*/
     margin-bottom: 0.5rem;
     display: block;
 }
+
+
+/*bericht contact*/
+.contact_div_bericht{
+    justify-self: center;
+}
+.bericht_contact_button{
+    border-radius: 2px;
+    background-color: gray;
+    color: white;
+}
+.label_contact{
+    justify-items: center;
+}
+.contacteer_h3{
+    justify-self: center;
+    border-bottom: 2px solid red;
+}

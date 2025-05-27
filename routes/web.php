@@ -8,12 +8,15 @@ use App\Http\Controllers\Admin\FAQController;
 use App\Http\Controllers\Admin\FaqCategoryController;
 use App\Http\Controllers\NieuwsController;
 use App\Models\Nieuws;
-
+use App\Http\Controllers\LeaderboardController;
+use App\Http\Controllers\Admin\ContactController;
 
 //default homescreen
 
 
+Route::get('/leaderboard', [LeaderboardController::class, 'index'])->name('leaderboard.index');
 
+//**** */
 //Route::get('/', function () {
 //    return view('home');
 //})->name('home');
@@ -100,6 +103,20 @@ Route::get('/nieuws/{nieuws}', [NieuwsController::class, 'show'])->name('nieuws.
 Route::delete('/nieuws/{nieuw}', [NieuwsController::class, 'destroy'])->name('admin.nieuws.destroy');
 Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('nieuws', NieuwsController::class)->except(['index','show']);
+});
+
+
+
+
+//publiek contact formulier voor ingelogde gebruikers
+Route::middleware('auth')->group(function () {
+    Route::get('/contact', [ContactController::class, 'create'])->name('contact.form');
+    Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+});
+Route::get('/contact', [ContactController::class, 'create'])->name('contact.formulier');
+// Alleen admin kan berichten zien
+Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 });
 
 require __DIR__.'/auth.php';

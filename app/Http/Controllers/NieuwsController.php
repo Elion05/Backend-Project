@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Nieuws;
+use Carbon\Carbon;
+use App\Models\Contactmessage;
 
 class NieuwsController extends Controller
 {
@@ -108,11 +110,18 @@ class NieuwsController extends Controller
 
 
 
-    public function home(){
+   public function home(){
+    $nieuwsitems = Nieuws::orderBy('verzondenOp', 'desc')->get();
 
-        $nieuwsitems = Nieuws::orderBy('verzondenOp', 'desc')->get();
+    // Voeg dit toe
+    $weekelijks = Carbon::now()->subDays(7);
+    $topUsers = Contactmessage::where('created_at', '>=', $weekelijks)
+        ->selectRaw('naam, email, count(*) as berichten_count')
+        ->groupBy('naam', 'email')
+        ->orderByDesc('berichten_count')
+        ->take(10)
+        ->get();
 
-   
-        return view('home', compact('nieuwsitems'));
+    return view('home', compact('nieuwsitems', 'topUsers'));
     }
 }

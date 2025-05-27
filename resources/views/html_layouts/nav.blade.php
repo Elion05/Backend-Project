@@ -25,7 +25,8 @@
 <!--alleen zichtbar voor admins-->
     @auth
     @if(Auth::user()->is_admin)
-        
+        <a href="{{ route('admin.contact.index') }}">Bekijk contactberichten</a>
+
 <!--NieuwsBERICHT link voor admins alleen-->
         <a href="{{ route('admin.nieuws.create') }}">Nieuwsbericht maken</a>
 
