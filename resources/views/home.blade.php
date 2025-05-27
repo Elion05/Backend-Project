@@ -12,8 +12,7 @@
 {{auth()->user()->name}}
 @else
 bezoeker
-@endif
-bij mijn website!!
+@endif, bij E-Sport gaming, hier vind je alles van vragen tot nieuws over de esport!
 </h1>
 
 @include('html_layouts.leaderboard')

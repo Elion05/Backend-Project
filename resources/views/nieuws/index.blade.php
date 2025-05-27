@@ -12,7 +12,7 @@
         <article class="nieuwsbericht_index__item">
             <h3 class="nieuwsbericht_index__item-titel">{{ $nieuws->titel }}</h3>
             <p class="nieuwsbericht_index__item-datum">
-                <small>Verzonden op: {{ \Carbon\Carbon::parse($nieuws->verzondenOp)->format('d-m-Y') }}</small>
+                <p style="font-size:14px; border-bottom:2px solid black;">Verzonden op: {{ \Carbon\Carbon::parse($nieuws->verzondenOp)->format('d-m-Y') }}</p>
             </p>
             <p class="nieuwsbericht_index__item-tekst">{{ $nieuws->nieuws }}</p>
             
@@ -29,7 +29,7 @@
             <form action="{{ route('admin.nieuws.destroy', $nieuws) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="submit">Verwijder</button>
+            <button type="submit" onclick="return confirm('nieuws verwijderen?')" style="background-color:gray; color:white;" >Verwijder nieuws</button>
             </form>
             @endif
 
