@@ -40,7 +40,7 @@ class FaqCategoryController extends Controller
         return view('admin.faq_categories.categorieMaken', compact('categories'));
     }
 
-
+//
     //bewerken van categorie
     public function edit(FaqCategory $faqCategory){
 
