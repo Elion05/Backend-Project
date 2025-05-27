@@ -16,9 +16,7 @@ class FaqCategorySeeder extends Seeder
         //
 
         FaqCategory::create(['name' => 'Random category1']);
-        FaqCategory::create(['name' => 'Random category2']);
-        FaqCategory::create(['name' => 'Random category3']);
-        FaqCategory::create(['name' => 'Random category4']);
+
 
     }
 }

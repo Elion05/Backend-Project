@@ -21,33 +21,6 @@ class NieuwsSeeder extends Seeder
             'verzondenOp' => Carbon::now(),
         ]);
 
-         //Nieuws::create([
-           // 'titel' => 'tweede',
-            //'nieuws' => 'tweede',
-            //'foto' => null,
-            //'verzondenOp' => Carbon::now()->subDays(2),
-        //]);
-
-     //    Nieuws::create([
-       //     'titel' => 'derder',
-         //   'nieuws' => 'derder',
-           // 'foto' => null,
-            //'verzondenOp' => Carbon::now()->subDays(3),
-        //]);
-
-        // Nieuws::create([
-            //'titel' => 'vierde',
-            //'nieuws' => 'vierder',
-            //'foto' => null,
-            //'verzondenOp' => Carbon::now()->subDays(4),
-        //]);
-
-       //  Nieuws::create([
-            //'titel' => 'vijfde',
-            //'nieuws' => 'vijfde',
-           // 'foto' => null,
-         //   'verzondenOp' => Carbon::now()->subDays(5),
-       // ]);
-        
+      
     }
 }

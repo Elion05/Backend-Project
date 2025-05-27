@@ -1,7 +1,15 @@
 @extends('html_layouts.main')
-<!--profiel voor niet ingelogde gebruikers-->
+
+@section('title',' - Profiel')
+
 @section('content')
-    <h1>Profiel</h1>
-    <p>Op deze pagina vind je informatie over gebruikersprofielen.</p>
-    <p>Registreer je om jouw profiel in te vullen!!!!</p>
+<h1 class="profiel_titel">Profiel</h1>
+    <div class="profiel_container">
+    <p class="profiel_info">Username: </p>
+    <p class="profiel_info">Naam:</p>
+    <p class="profiel_info">Email: </p>
+    <p class="profiel_info">Verjaardag:</p>
+    <p class="profiel_info">Over mij: </p>
+ 
+</div>
 @endsection

@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
-use  App\Http\Controllers\publiekeFaqController;
+use App\Http\Controllers\publiekeFaqController;
 use App\Http\Controllers\Admin\FAQController;
 use App\Http\Controllers\Admin\FaqCategoryController;
 use App\Http\Controllers\NieuwsController;

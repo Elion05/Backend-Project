@@ -3,7 +3,7 @@
 @section('title', 'berichten')
 
 @section('content')
-    <h2>berichten</h2>
+    <h2>Berichten</h2>
 
     @forelse($berichten as $bericht)
         <div class="contact_personen">
@@ -22,11 +22,17 @@
 .contact_personen{
     justify-self:center;
     width: 800px;
-    border:2px solid gray;
+    border:5px solid black;
     padding:4px;
+    background-color:gray;
+    color:yellow;
 }
 h2{
     justify-self:center;
-    border-bottom:4px solid green;
+    border-bottom:4px solid black;
+    color:yellow;
+    background-color:gray;
+    padding:5px;
+    border-radius:5px;
 }
 </style>
