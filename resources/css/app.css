@@ -5,3 +5,374 @@
 
 
 
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.alert-error {
+    background-color: #fecaca;
+    color: #991b1b;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+/*einde chatgpt css*/
+
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.titel {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    color: black;
+    background-color: #859189;
+}
+
+.gebruikers{
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*HIER ZIT ALLES VAN CSS VOOR DE FAQ, OOK VOOR HET TOEVOEGEN BEHALVE VOOR DE CATEGORIE TOE TE VOEGEN*/
+
+.FAQ_container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #0c0c0c;
+    font-size: 20px;
+}
+
+.FAQ_container h2 {
+    border-bottom: 2px solid #7a8896;
+    color: #f0af61;
+}
+
+.FAQ_vragen {
+    list-style: none;
+}
+
+.FAQ_vragen li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.FAQ_antwoorden p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #020202;
+}
+
+
+.FAQ_acties {
+    margin-top: 1rem;
+    display: flex;
+    gap: 80px;
+}
+
+
+.FAQ_bewerk button {
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.FAQ_verwijderen button {
+    background-color: #dc3545;
+    border: none;
+  
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.FAQ_toevoegen a {
+    display: inline-block;
+    background-color: #888179;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+}
+
+/*deze is voor de faq toevoegen*/
+
+.faq-create-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgb(73, 73, 75);
+    border-radius: 8px;
+    color:yellow;
+}
+.h1_faq_create{
+    border-bottom: 2px solid rgb(63, 29, 196);
+    max-width: fit-content;
+    justify-self: center;
+    color: rgb(94, 94, 92);
+}
+
+.faq-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.faq-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.faq-submit-btn {
+    background-color: #727e8f;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.FAQ_categorie_link{
+    font-size: 12px;
+    text-decoration: none;
+    color: #28a745;
+}
+/*dit is niet zichtbaar voor de admins, 
+dit is achter de schermen voor mezelf om de naam van de categorie te veranderen*/
+.faq_edit_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #edd415;
+}
+
+.faq_edit_form {
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgb(13, 174, 224);
+    padding: 20px;
+    
+}
+
+.faq_edit_group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq_edit_label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.faq_edit_input {
+    padding: 20px;
+    border: 1px solid #f8f8f8;
+    border-radius: 40px;
+    font-size: 16px;
+}
+
+.faq_edit_button {
+    background-color: #5d6369;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.faq_edit_button:hover {
+    background-color: #98c2cc;
+    color: rgb(0, 0, 0);
+}
+
+
+/*css voor de users*/
+.container {
+    max-width: 600px;
+    margin: 10px auto;
+}
+  
+h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+  
+input[type="password"] {
+    width: 100%;
+    padding: 8px;    
+}
+
+input[type="email"]{
+    width: 100%;
+    padding: 8px;
+}
+  
+input[type="text"]{
+    width: 100%;
+    padding: 8px;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+  
+button {
+    background:rgb(6, 93, 186);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 4px;
+}
+
+
+
+/*simeple css voor de Profiel*/
+/* Geel-blauw thema voor profielpagina */
+
+.profiel_container {
+    background: #f7fafc;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px 24px;
+}
+
+.profiel_titel{
+    border-bottom: 2px solid rgb(233, 198, 21);
+    max-width: auto;
+    font-size: 80px;
+    color: rgb(36, 129, 235);
+    justify-self: center;
+}
+
+.profiel_info {
+    margin-bottom: 14px;
+    color: #263238;
+    font-size: 1.07rem;
+}
+
+.profiel_foto {
+    display: block;
+    margin: 22px 0 14px 0;
+    border-radius: 8px;
+    border: 3px solid black;
+}
+
+.profiel_edit_link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #1976d2;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+}
+.profiel_edit_link:hover{
+    background-color: rgb(128, 119, 119);
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+/*Dit is voor de admin/nieuws/create css formulier voor de niuews*/
+/*deze is hetzelfde css zoals van de FAQ toevoegen, maar ik heb chatgpt gebruikt om het te schrijven
+om minder tijd te verspillen*/
+.create_nieuws-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgb(73, 73, 75);
+    border-radius: 8px;
+    color: yellow;
+}
+
+.create_nieuws-title {
+    border-bottom: 2px solid rgb(63, 29, 196);
+    max-width: fit-content;
+    justify-self: center;
+    color: rgb(94, 94, 92);
+    margin-bottom: 20px;
+}
+
+.create_nieuws-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.create_nieuws-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.create_nieuws-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.create_nieuws-submit-btn {
+    background-color: #727e8f;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}

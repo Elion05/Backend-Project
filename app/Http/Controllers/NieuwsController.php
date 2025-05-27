@@ -13,6 +13,10 @@ class NieuwsController extends Controller
     public function index()
     {
         //
+
+        $nieuwsitems = Nieuws::orderBy('verzondenOp', 'desc')->get();
+
+        return view('nieuws.index', compact('nieuwsitems'));
     }
 
     /**
@@ -56,18 +60,18 @@ class NieuwsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
+    public function edit(Nieuws $nieuw){
+       
+        return view('admin.nieuws.edit', ['nieuws' => $nieuw]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id){
+    public function update(Request $request, Nieuws $nieuw){
 
         
-        $nieuwsitems = Nieuws::latest()->get();
+       
 
         $dataUpdate = $request->validate([
             'titel' => 'required|string|max:255',
@@ -80,7 +84,7 @@ class NieuwsController extends Controller
             $dataUpdate['foto'] = $request->file('foto')->store('news_images', 'public');
         }
 
-        $nieuws->update($dataUpdate);
+        $nieuw->update($dataUpdate);
 
         return redirect()->route('nieuws.index')->with('succes', 'NieuwsItem bijgewerkt');
     }

@@ -9,4 +9,7 @@ class Nieuws extends Model{
     
     protected $fillable = ['titel','nieuws','foto','verzondenOp'];
 
+
+
+    protected $casts = ['verzondenOp' => 'datetime',];
 }

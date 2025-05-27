@@ -1,6 +1,9 @@
 <div class="navbar">
     <a href="{{ route('home') }}">Home</a>
 
+    <a href="{{ route('nieuws.index') }}"> Nieuws</a>
+
+
     <div class="dropdown">
         <button class="dropbtn">Account ▾</button>
         <div class="dropdown-menu">
@@ -22,6 +25,10 @@
 <!--alleen zichtbar voor admins-->
     @auth
     @if(Auth::user()->is_admin)
+        
+<!--NieuwsBERICHT link voor admins alleen-->
+        <a href="{{ route('admin.nieuws.create') }}">Nieuwsbericht maken</a>
+
         <div class="dropdown">
             <button class="dropbtn">FAQ ▾</button>
             <div class="dropdown-menu">

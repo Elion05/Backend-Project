@@ -22,31 +22,32 @@ class DatabaseSeeder extends Seeder
 
 
         //dit is voor admin users
-        User::create([
-            'name' => 'Admin',
-            'username' => 'admin',
-            'email' => 'admin@ehb.be',
-            'password' => Hash::make('Password!321'),
-            'is_admin' => true,
-            'birthday' => '2005-07-22',
-            'bio' => 'ik ben admin lol',
-            'profile_image' => '...',
-        ]);
+//        User::create([
+  //          'name' => 'Admin2',
+    //        'username' => 'wachtwoord is test123456',
+      //     'email' => 'admin@ehb.com',
+       //    'password' => Hash::make('test123456'),
+//            'is_admin' => true,
+  //          'birthday' => '2005-07-22',
+    //        'bio' => 'ik ben admin lol 2',
+      //      'profile_image' => '...',
+        //]);
 
 
 
         // User::factory(10)->create();
 
         //dit is voor test users
-        User::factory()->create([
-
-        'name' => 'Test User',
-        'username' => 'testuser',
-        'email' => 'test@example.com',
-        'birthday' => '2000-05-20',
-        'bio' => 'Random woorden hierin',
-        'profile_image' => '...',
-
-        ]);
+//        User::factory()->create([
+//
+  //      'name' => 'Jan Pieter',
+    //    'username' => 'testuser',
+      //  'email' => 'test@gmail.com',
+        //'password' => Hash::make('test123456'),
+//        'birthday' => '2000-05-20',
+  //      'bio' => 'Random woorden hierin',
+    //    'profile_image' => '...',
+//
+  //      ]);
     }
 }

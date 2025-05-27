@@ -93,13 +93,13 @@ Route::middleware('auth')->group(function () {
 });
 
 
-//routes voor nieuwsberichten
+//routes voor nieuwsberichten publiek
 Route::get('/nieuws', [NieuwsController::class, 'index'])->name('nieuws.index');
 Route::get('/nieuws/{nieuws}', [NieuwsController::class, 'show'])->name('nieuws.show');
 
 
-
-Route::middleware(['auth', 'can:admin'])->prefix('admin')->group(function(){
+Route::middleware(['auth', 'can:admin'])->prefix('admin')->name('admin.')->group(function(){
     Route::resource('nieuws', NieuwsController::class)->except(['index','show']);
 });
+
 require __DIR__.'/auth.php';
